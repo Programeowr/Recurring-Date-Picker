@@ -1,0 +1,160 @@
+.calendarContainer{
+    width: 50vw;
+    height: 150vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 7vh;
+    border: 1vw solid black;;
+    border-radius: 5vw;
+    font-family: var(--font-outfit);
+    margin-inline: auto;
+    background-color: #001233;
+    color: white;
+    
+}
+
+.calendarDropdown{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    font-size: 4em;
+    margin-bottom: 10vh;
+}
+
+.calendarHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.monthPicker:hover, .yearPicker:hover{
+    cursor: pointer;
+}
+
+.monthGrid, .yearGrid {
+    font-size: 2em;
+    display: grid;
+    background-color: #3799fb;
+    justify-content: center;
+    position: absolute;
+    width: 57vw;
+    margin-top: -3vh;         
+    left: 50%;  
+    transform: translateX(-50%);
+    z-index: 1000;
+    gap: 2vh 3vw;
+    padding: 2vh 4vw;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 2vw;
+}
+
+.yearGrid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2vh 3vw;
+    justify-content: center;
+    
+}
+
+.monthCell, .yearCell {
+    text-align: center;
+    padding: 2vh 2vw;
+    border-radius: 1vw;
+    background-color: #001233;
+}
+
+.yearCell{
+    width: 5vw;
+}
+
+.monthCell:hover, .yearCell:hover{
+    cursor: pointer;
+}
+
+.yearButton{
+    border: none;
+    border-radius: 1vw;
+    background-color: #f9c74f;
+    color: white;
+    font-family: var(--font-outfit);
+    font-size: 1em;
+    width: 9vw;
+}
+
+.yearButton:hover{
+    cursor: pointer;
+}
+
+#calendarButton1{
+    border: none;
+    position: absolute;
+    left: -10%;
+    color: #f9c74f;
+    font-size: 3rem;
+    background-color: #001233;
+    font-family: var(--font-outfit);
+    border-radius: 1vw;
+}
+
+#calendarButton2{
+    border: none;
+    position: absolute;
+    right: -10%;
+    color: #f9c74f;
+    font-size: 3rem;
+    background-color: #001233;
+    font-family: var(--font-outfit);
+    border-radius: 1vw;
+}
+
+.calendarDropdown button:hover{
+    cursor: pointer;
+}
+
+.calendarGrid{
+    background-color: #002855;
+    padding: 5vh;
+    width: 60vw;
+    height: 110vh;
+    border-radius: 2vw;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5vw;
+    text-align: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.calendarGrid:hover{
+    cursor: pointer;
+}
+
+.calendarCell{
+    display: flex;
+    width: 2vw;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+}
+
+.calendarCell:hover{
+    cursor: pointer;
+}
+
+.today, .selected{
+    background-color: #3799fb;
+    color: white;
+    border-radius: 50%;
+    padding: 1vh 0;
+}
+
+.isDisabled{
+    opacity: 0.3;
+}
