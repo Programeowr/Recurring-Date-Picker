@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Calendar from "./Calendar.js"
 import Repeat from "./Repeat.js"
 import { useState } from "react";

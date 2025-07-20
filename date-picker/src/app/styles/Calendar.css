@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     gap: 10vw;
-    font-size: 4em;
+    font-size: 4rem;
     margin-bottom: 10vh;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .monthGrid, .yearGrid {
-    font-size: 2em;
+    font-size: 2rem;
     display: grid;
     background-color: #3799fb;
     justify-content: center;

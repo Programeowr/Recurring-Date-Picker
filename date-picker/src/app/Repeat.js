@@ -8,7 +8,7 @@ import Calendar from "./Calendar.js"
 export default function Repeat({startDate, setStartDate, endDate, setEndDate, 
                                 setParentSelectedDays, setParentSelectedMonths,
                                 removeDateOfMonth, setRemoveDateOfMonth,
-                                removeWeekdayInstance, setRemoveWeekdayInstance}) {
+                                removeWeekdayInstance, setRemoveWeekdayInstance,}) {
     const days = ["S", "M", "T", "W", "T", "F", "S"];
     const months = [
         "Jan", "Feb", "Mar", "Apr", "May", "Jun",

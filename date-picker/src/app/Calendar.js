@@ -55,9 +55,15 @@ export default function Calendar({onDateSelect, initialDate, highlightedWeekdays
     const handleDayClick = (dayNum) => {
         const clickedDate = new Date(year, month, dayNum);
 
-        if ((startDate && clickedDate < new Date(startDate.setHours(0,0,0,0))) ||
-            (endDate && clickedDate > new Date(endDate.setHours(0,0,0,0)))) {
-            return; 
+        const startCopy = startDate ? new Date(startDate) : null;
+        const endCopy = endDate ? new Date(endDate) : null;
+        clickedDate.setHours(0, 0, 0, 0);
+        startCopy?.setHours(0, 0, 0, 0);
+        endCopy?.setHours(0, 0, 0, 0);
+
+        if ((startCopy && clickedDate < startCopy) ||
+            (endCopy && clickedDate > endCopy)) {
+            return;
         }
 
         const matchDay = clickedDate.getDate();
@@ -103,6 +109,8 @@ export default function Calendar({onDateSelect, initialDate, highlightedWeekdays
                     copy.getDay() === matchWeekday &&
                     getWeekOfMonth(copy) === matchWeekOfMonth
                 ) {
+                    newDates.push(copy);
+                } else if (!removeDateOfMonth && !removeWeekdayInstance && isSameDate(copy, clickedDate)) {
                     newDates.push(copy);
                 }
             }
